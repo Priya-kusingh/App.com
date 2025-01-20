@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doc</title>
+  <!-- <link rel="stylesheet" href="Appment.css"> -->
+</head>
+<style>
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh; /* Full height */
+    overflow: hidden;
+  
+  }
+  .left-container {
+    width: 50%; 
+    background-color: #121212; 
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, auto); 
+    gap: 20px;
+    padding: 20px;
+    animation: slideInLeft 1s ease-in-out; 
+  } 
+  .grid-item {
+    background-color: black;
+    padding: 48.5px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 1px 1px 8px rgb(75, 73, 73);
+  }
+  .left-container h1 {
+    font-size: 3rem; /* Large numbers */
+    color: orange;
+    margin: 0;
+  }
+  
+  .left-container p {
+    font-size: 1.2rem;
+  }
+  
+  /* Right Container */
+  .right-container {
+    width: 50%; /* Fixed 50% width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    animation: slideInRight 1s ease-in-out; /* Right-to-left animation */
+  }
+  
+  .right-container img {
+    width: 100%;
+    height: 485px;
+    object-fit: cover;
+    border-left: 5px solid #121212; /* Optional separator line */
+  }
+  
+  /* Animations */
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Stack containers */
+      height: auto;
+    }
+  
+    .left-container, .right-container {
+      width: 100%; /* Full width */
+      animation: none; /* Disable animations */
+    }
+  
+    .left-container {
+      grid-template-columns: 1fr; /* Single column layout */
+    }
+  }
+  
+  
+
+  /* our hiring partner */
+
+  .partners-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: center;
+    justify-content: center;
+   display: flex;
+  }
+
+  /* Hiring Partner Section */
+.hiring-partner-section {
+    overflow: hidden; /* Ensures smooth animations */
+    background-color: rgb(251, 239, 239); /* Light background color */
+    padding: 10px 10px;
+    
+  }
+  
+  .partner-row {
+    display: flex;
+    gap: 20px ; /* Spacing between images */
+    width: 100%;
+    column-gap: 20px;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .partner-row img {
+    max-width: 100%;
+  height: 160px;
+  object-fit: contain;
+  padding: 20px;
+
+ 
+  
+  }
+  
+  /* Row Animations */
+  .row-left-to-right {
+    animation-name: slideLeftToRight;
+    animation-duration: 10s; /* Adjust speed */
+    
+  }
+  
+  .row-right-to-left {
+    animation-name: slideRightToLeft;
+    animation-duration: 10s; 
+   
+  }
+  
+  /* Keyframes for Left-to-Right */
+  @keyframes slideLeftToRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Keyframes for Right-to-Left */
+  @keyframes slideRightToLeft {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 768px) {
+    .partner-row img {
+      width: 100px; /* Smaller images on mobile */
+    }
+  }
+</style>
+<body>
+  <body>
+    <div class="container">
+      <div class="left-container">
+            <div class="grid-item">
+              <h1>2000+</h1>
+              <p>Resources</p>
+            </div>
+            <div class="grid-item">
+              <h1>2+</h1>
+              <p>Locations</p>
+            </div>
+            <div class="grid-item">
+              <h1>200+</h1>
+              <p>Projects</p>
+            </div>
+            <div class="grid-item">
+              <h1>50+</h1>
+              <p>Teams</p>
+            </div>
+       </div>
+  
+          <div class="right-container">
+            <img src="space.jpg" alt="Office" />
+          </div>
+    </div>
+      </body>
+</body>
+</html>
