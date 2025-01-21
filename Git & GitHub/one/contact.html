@@ -7,7 +7,6 @@
     <!-- <link rel="stylesheet" href="contact.css"> -->
 </head>
 <style>
-/* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -15,7 +14,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 90vh;
   }
   
   .responsive-container {
@@ -24,15 +23,15 @@ body {
     width: 100%;
     max-width: 1200px;
     background-color: #fff;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    box-shadow: 1 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    /* overflow: hidden; */
+    
   }
   
   /* Left Container */
   .left-container {
     display: flex;
-    width: 50%;
+    width: 45%;
     background-color: #eee;
     align-items: center;
     justify-content: center;
@@ -43,13 +42,11 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* display: block; */
+   
     display: flex;
   }
-  
-  /* Right Container */
   .right-container {
-    width: 50%;
+    width: 45%;
     display: flex;
     padding: 40px;
     display: flex;
@@ -81,12 +78,14 @@ body {
     font-size: 16px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    width: 80%;
   }
   
   .right-container input:focus,
   .right-container textarea:focus {
     outline: none;
     border-color: #007BFF;
+    height: 20px;
   }
   
   .right-container button {
@@ -96,6 +95,7 @@ body {
     background-color: #007BFF;
     border: none;
     border-radius: 4px;
+    width: 100px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
@@ -116,7 +116,8 @@ body {
     }
   
     .right-container {
-      padding: 20px;
+      padding: 0px;
+      margin: 20px;
     }
   }
   
